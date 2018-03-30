@@ -1,0 +1,36 @@
+首先，新建一个仓库，也就是一个新的文件夹，在文件夹里新建一个.txt文件
+mkdir learngit
+cd learngit
+pwd    #用来显示当前目录
+
+
+打开git bush here
+git init     #初始化
+git add xxx.txt      #把文件添加到仓库（其实是放在暂存区）
+git commit -m "git命令第一次提交"      #“”里的内容为注释，便于我们获取这次提交的内容（从暂存区真正上传到master）
+
+git status     #时刻掌握仓库当前的状态，看是否有改动
+git diff xxx.txt    #可以查看两次提交的不同之处
+
+版本回退
+git log    #此命令可以查看提交记录，可以看到每次提交的ID
+git reset --hard HEAD^     #回退到上一个版本
+
+
+从回退回的版本再回到之后的版本：
+git reflog     #可以获取每一次命令的ID
+git reset --hard commit_id
+
+
+穿梭前 使用git log 查看提交历史
+要返回未来，使用git reflog查看命令历史
+
+注：每次修改若不add到暂存区，那么就不会加入到commit中。
+
+git checkout --xxx.txt   #此条命令意思是把xxx.txt文件在工作区的修改全部撤销。
+
+删除：
+git rm xxx.txt
+git commit -m "remove the file"
+
+当然了，如果手误删错了，也可以用git checkout --xxx.txt还原
