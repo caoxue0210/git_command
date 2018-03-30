@@ -34,3 +34,18 @@ git rm xxx.txt
 git commit -m "remove the file"
 
 当然了，如果手误删错了，也可以用git checkout --xxx.txt还原
+
+创建新的分支
+git checkout -b 分支名     #创建分支并切换到当前分支
+相当于下面两句话：
+git branch 分支名
+git checkout 分知名
+
+git branch    #查看当前分支   当前分支前会有一个*
+
+
+合并分支：
+git merge name
+
+删除分支：
+git branch -d name
